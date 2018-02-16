@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<script src="js/check.js"></script>
 		<!-- Basic -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Login | Porto - Responsive HTML5 Template 5.7.1</title>	
+		<title>Medical Shop SignUp</title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -38,7 +38,7 @@
 		<link rel="stylesheet" href="css/theme-shop.css">
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skins/default.css">
+		<link rel="stylesheet" href="css/skins/skin-medical.css">
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
@@ -51,7 +51,7 @@
 
 		<div class="body">
 			<header id="header" class="header-narrow" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 35, 'stickySetTop': '-35px', 'stickyChangeLogo': false}">
-				<div class="header-body">
+				<!--<div class="header-body">
 					<div class="header-top header-top header-top-style-3 header-top-custom">
 						<div class="container">
 							<nav class="header-nav-top pull-right">
@@ -68,7 +68,7 @@
 								</ul>
 							</nav>
 						</div>
-					</div>
+					</div> -->
 					<div class="header-container container">
 						<div class="header-row">
 							<div class="header-column">
@@ -87,7 +87,7 @@
 										<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
 											<nav> 
 												<ul class="nav nav-pills" id="mainNav">
-													<li class="activedropdown-full-color dropdown-secondary">
+													<li class="dropdown-full-color dropdown-secondary">
 														<a href="demo-medical.html">
 															Home
 														</a>
@@ -102,19 +102,19 @@
 															Sign-Up
 														</a>
 														<ul class="dropdown-menu">
-															<li><a href="demo-medical-departments-detail.html">Sign-Up as Doctor</a></li>
-															<li><a href="demo-medical-departments-detail.html">Sign-Up as Patient</a></li>
-															<li><a href="demo-medical-departments-detail.html">Sign-Up as Medical Shop Owner</a></li>
+															<li><a href="doctor-sign_up.html">Sign-Up as Doctor</a></li>
+															<li><a href="patient-sign_up.html">Sign-Up as Patient</a></li>
+															<li><a href="medical-sign_up.html">Sign-Up as Medical Shop Owner</a></li>
 														</ul>
 													</li>
 													<li class="dropdown dropdown-full-color dropdown-secondary">
 														<a class="dropdown-toggle" href="demo-medical-departments.html">
-															Sign Up
+															Login
 														</a>
 														<ul class="dropdown-menu">
-															<li><a href="demo-medical-departments-detail.html">Login as Doctor</a></li>
-															<li><a href="demo-medical-departments-detail.html">Login as Patient</a></li>
-															<li><a href="demo-medical-departments-detail.html">Login as Medical Shop Owner</a></li>
+															<li><a href="doctor-login.html">Login as Doctor</a></li>
+															<li><a href="patient-login.html">Login as Patient</a></li>
+															<li><a href="medical-login.html">Login as Medical Shop Owner</a></li>
 														</ul>
 													<li class="dropdown-full-color dropdown-secondary">
 														<a href="demo-medical-contact.html">
@@ -145,7 +145,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<h1>Login</h1>
+								<h1>Medical Shop SignUp</h1>
 							</div>
 						</div>
 					</div>
@@ -161,13 +161,45 @@
 									<div class="col-sm-6">
 										<div class="featured-box featured-box-primary align-left mt-xlg">
 											<div class="box-content">
-												<h4 class="heading-primary text-uppercase mb-md">Sign Up</h4>
-												<form action="/" id="frmSignIn" method="post">
+												<h4 class="heading-primary text-uppercase mb-md"></h4>
+												<form action="/" id="frmSignIn" method="post" onsubmit="return fun()">
 													<div class="row">
 														<div class="form-group">
 															<div class="col-md-12">
-																<label>Owner name of medical</label>
+																<label>Enter Medical Shop Name</label>
 																<input type="text" value="" class="form-control input-lg">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Enter Owner Name</label>
+																<input type="text" value="" class="form-control input-lg">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Enter E-mail Address</label>
+																<input type="email" value="" class="form-control input-lg" id="s_email">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Enter Password</label>
+																<input type="password" value="" class="form-control input-lg" id="s_pass">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Re-Enter Password</label>
+																<input type="password" value="" class="form-control input-lg" id="s_rpass">
 															</div>
 														</div>
 													</div>
@@ -175,7 +207,7 @@
 													<div class="row">
 														<div class="form-group">
 															<div class="col-md-12">
-																<label>E-mail Address</label>
+																<label>Enter Shop No./Building No.</label>
 																<input type="text" value="" class="form-control input-lg">
 															</div>
 														</div>
@@ -183,21 +215,44 @@
 													<div class="row">
 														<div class="form-group">
 															<div class="col-md-12">
-																<label>password</label>
-																<input type="password" value="" class="form-control input-lg">
+																<label>Enter Area/Locality</label>
+																<input type="text" value="" class="form-control input-lg">
 															</div>
 														</div>
 													</div>
 													<div class="row">
 														<div class="form-group">
 															<div class="col-md-12">
-																<label>Address</label>
-																<textarea cols="20" rows="4" class="form-control input-lg">
-																	
-																</textarea>
+																<label>Enter City</label>
+																<input type="text" value="" class="form-control input-lg">
 															</div>
 														</div>
 													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Enter State</label>
+																<input type="text" value="" class="form-control input-lg">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Enter Pincode</label>
+																<input type="text" value="" class="form-control input-lg">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Enter Mobile Number</label>
+																<input type="text" value="" class="form-control input-lg" id="s_pno">
+															</div>
+														</div>
+													</div>
+													
 													<div class="row">
 														<div class="col-md-6">
 															<span class="remember-box checkbox">
@@ -207,7 +262,7 @@
 															</span>
 														</div>
 														<div class="col-md-6">
-															<input type="submit" value="Login" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
+															<input type="submit" value="SignUp" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
 														</div>
 													</div>
 												</form>
